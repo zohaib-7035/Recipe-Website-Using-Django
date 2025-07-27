@@ -1,7 +1,7 @@
 
 ---
 
-### 👨‍🍳 Django Recipe APP
+### 👨‍🍳 Django Recipe App
 
 ```markdown
 # 🥗 Vegetable Recipe Web App
