@@ -1,8 +1,12 @@
 
-```markdown
-## 🥗 Vegetable Recipe Web App
+---
 
-A Django web application that allows users to add, view, search, and delete vegetable recipes with image support.
+### ✅ Final Polished `README.md`
+
+```markdown
+# 🥗 Vegetable Recipe Web App
+
+A Django web application that allows users to add, view, search, update, and delete vegetable recipes with image support.
 
 ---
 
@@ -14,18 +18,17 @@ This is a beginner-friendly web app built using the Django framework. Users can:
 - 🔍 Search recipes by name
 - 🧾 View all added recipes
 - 🗑️ Delete recipes
+- ✏️ Update recipes
 
 This project is ideal for learning CRUD (Create, Read, Update, Delete) operations in Django.
 
 ---
 
-
-
 ## 🛠️ Tech Stack
 
 - **Backend**: Django
-- **Frontend**: HTML, CSS (Bootstrap for styling)
-- **Database**: SQLite (default with Django)
+- **Frontend**: HTML, CSS (Bootstrap)
+- **Database**: SQLite (default)
 - **Language**: Python 3
 
 ---
@@ -47,15 +50,15 @@ vegetable\_recipe/
 │   ├── urls.py            # App-level routing
 │   └── views.py           # Business logic
 ├── media/                 # Uploaded recipe images
-├── static/                # Static files (CSS, JS, Images)
+├── static/                # Static files (CSS, JS)
 ├── vegetable\_recipe/      # Project-level settings
 │   ├── **init**.py
 │   ├── asgi.py
 │   ├── settings.py
-│   ├── urls.py            # Project-level URL configuration
+│   ├── urls.py            # Project-level routing
 │   └── wsgi.py
 ├── db.sqlite3             # SQLite database
-├── manage.py
+├── manage.py              # Django management script
 ├── requirements.txt       # Project dependencies
 └── README.md              # This file
 
@@ -86,7 +89,7 @@ source venv/bin/activate     # On macOS/Linux
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is missing, install manually:
+If `requirements.txt` is missing:
 
 ```bash
 pip install django pillow
@@ -105,7 +108,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Visit: [http://127.0.0.1:8000/recipe/](http://127.0.0.1:8000/recipe/)
+Then open [http://127.0.0.1:8000/recipe/](http://127.0.0.1:8000/recipe/) in your browser.
 
 ---
 
@@ -122,37 +125,44 @@ class Vege(models.Model):
 
 ## 🔍 Search Feature
 
-* In the frontend (`recipe.html`), there's a search form.
-* On the backend, the view filters recipes using `icontains`:
+In `views.py`:
 
 ```python
 search_query = request.GET.get('search', '')
 recipes = Vege.objects.filter(name__icontains=search_query)
 ```
 
+In `recipe.html`:
+
+```html
+<form method="GET" action="{% url 'recipe' %}" class="mb-4">
+    <input type="text" name="search" class="form-control" placeholder="Search recipe by name..." value="{{ request.GET.search }}">
+    <button type="submit" class="btn btn-primary mt-2">Search</button>
+</form>
+```
+
 ---
 
-## ✅ Features To-Do
+## ✅ Features Checklist
 
 * [x] Add recipe with image
 * [x] View all recipes
 * [x] Search recipe by name
 * [x] Delete recipe
-* [ ] Edit recipe (optional)
-* [ ] User login & authentication (optional)
+* [x] Update recipe
+* [ ] User authentication (optional)
 
 ---
 
-
 ## 🤝 Contributing
 
-Contributions are welcome! Please fork the repo and submit a pull request.
+Contributions are welcome! Fork the repo, make your changes, and submit a pull request.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+Licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 ---
 
@@ -166,10 +176,9 @@ This project is licensed under the [MIT License](https://choosealicense.com/lice
 
 * [Django Documentation](https://docs.djangoproject.com/)
 * [Bootstrap](https://getbootstrap.com/)
-* [Pillow](https://python-pillow.org/)
+* [Pillow Library](https://python-pillow.org/)
 
 ```
 
 ---
-
 
