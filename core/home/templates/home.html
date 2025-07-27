@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Django Website!</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in data %}
+            <tr>
+                <td>{{ person.name }}</td>
+                <td>{{ person.age }}</td>
+                <td>{{ person.city }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>{{ text }}</p>
+{% endblock %}

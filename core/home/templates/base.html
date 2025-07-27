@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Django Site{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #007bff;
+        }
+        nav {
+            margin-bottom: 30px;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 40px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button onclick="window.location.href='{% url 'home' %}'">Home</button>
+        <button onclick="window.location.href='{% url 'about' %}'">About</button>
+        <button onclick="window.location.href='{% url 'contact' %}'">Contact</button>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
