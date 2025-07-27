@@ -19,11 +19,7 @@ This project is ideal for learning CRUD (Create, Read, Update, Delete) operation
 
 ---
 
-## 🖥️ Demo
 
-> 🚧 Add screenshots or a live demo link if hosted.
-
----
 
 ## 🛠️ Tech Stack
 
