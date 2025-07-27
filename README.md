@@ -37,32 +37,46 @@ This project is ideal for learning CRUD (Create, Read, Update, Delete) operation
 
 ```
 
-vegetable\_recipe/
-├── core/                  # Main Django app
+
+### ✅ Full Project Tree — `vegetable_recipe`
+
+```
+vegetable_recipe/
+├── core/
 │   ├── migrations/
+│   │   └── __init__.py
 │   ├── templates/
-│   │   └── recipe.html    # Main HTML template
-│   ├── **init**.py
+│   │   └── recipe.html
+│   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
-│   ├── models.py          # Vege model defined here
+│   ├── models.py
 │   ├── tests.py
-│   ├── urls.py            # App-level routing
-│   └── views.py           # Business logic
-├── media/                 # Uploaded recipe images
-├── static/                # Static files (CSS, JS)
-├── vegetable\_recipe/      # Project-level settings
-│   ├── **init**.py
+│   ├── urls.py
+│   └── views.py
+│
+├── media/                     # User uploaded images (empty until uploaded)
+│
+├── static/                    # Static files (add CSS/JS here)
+│   └── style.css              # Optional custom styling
+│
+├── vegetable_recipe/
+│   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
-│   ├── urls.py            # Project-level routing
+│   ├── urls.py
 │   └── wsgi.py
-├── db.sqlite3             # SQLite database
-├── manage.py              # Django management script
-├── requirements.txt       # Project dependencies
-└── README.md              # This file
+│
+├── db.sqlite3                 # SQLite database
+├── manage.py
+├── requirements.txt           # Add with `pip freeze > requirements.txt`
+└── README.md                  # You can paste your GitHub readme here
+```
 
-````
+---
+
+
+
 
 ---
 
