@@ -1,7 +1,7 @@
 
 ---
 
-### ✅ Final Polished `README.md`
+###  Djanog Recipe APP
 
 ```markdown
 # 🥗 Vegetable Recipe Web App
