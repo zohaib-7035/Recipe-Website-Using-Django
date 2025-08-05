@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from home.views import *
-from vege.views import recipe, delete_recipe, update_recipe
+from vege.views import recipe, delete_recipe, update_recipe,login_page,register_page,logout_view
 
 urlpatterns = [
     path('recipe/', recipe, name='recipe'),
@@ -28,6 +28,9 @@ urlpatterns = [
     path('recipe/update/<int:id>/', update_recipe, name='update_recipe'),
     path('', home, name='home'),
     path('about/', about, name='about'),
+    path('logout/', logout_view, name='logout_view'),
+    path('register/', register_page, name='register_page'),
+    path('login/', login_page, name='login_page'),
     path('contact/', contact, name='contact'),
     path('hi/', hi, name='hi'),
     path('admin/', admin.site.urls),

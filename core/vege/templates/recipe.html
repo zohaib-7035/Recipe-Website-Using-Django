@@ -50,6 +50,14 @@
     </style>
 </head>
 <body>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>🥗 Recipe App</h1>
+    <form method="POST" action="{% url 'logout_view' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</div>
+
 
     <h1>🥗 Recipe App</h1>
 
